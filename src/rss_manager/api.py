@@ -60,7 +60,3 @@ async def invalid_rss_feed(request, exc):
         status_code=400,
         content={'message': 'Invalid RSS feed. Looks like, it is imposible to parse it :-('}
     )
-
-if __name__ == '__main__':
-    logging.info('Starting the server')
-    uvicorn.run(app, host='0.0.0.0', port=8000)
